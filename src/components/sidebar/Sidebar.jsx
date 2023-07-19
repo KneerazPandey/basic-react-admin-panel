@@ -9,6 +9,7 @@ import { BsBorderStyle } from 'react-icons/bs';
 import { CiDeliveryTruck } from 'react-icons/ci';
 import { LiaBlogSolid } from 'react-icons/lia';
 import { BiUserCircle, BiSolidLogOut } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -21,15 +22,19 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className='title'>MAIN</p>
-          <li>
-            <SiHomeadvisor className='icon'/>
-            <span>Dashboard</span>
-          </li>
+            <Link to='/' style={{textDecoration: 'none'}}>
+              <li>
+                <SiHomeadvisor className='icon'/>
+                <span>Dashboard</span>
+              </li>
+            </Link>
           <p className='title'>LISTS</p>
-          <li>
-            <FiUsers className='icon' />
-            <span>Users</span>
-          </li>
+            <Link to='/user' style={{textDecoration: 'none'}}>
+              <li>
+                <FiUsers className='icon' />
+                <span>Users</span>
+              </li>
+            </Link>
           <li>
             <MdProductionQuantityLimits className='icon' />
             <span>Products</span>
